@@ -1,0 +1,25 @@
+
+.wrapper {
+  overflow-y: auto;
+  height: 100%;
+}
+.transcript {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.userMessage {
+  margin: 5px;
+  background: greenyellow;
+  max-width: 60%;
+}
+
+.otherUser {
+  align-self: flex-end;
+  background: whitesmoke;
+}
+
+.offlineImg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,31 @@
+
+.msg {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.mainMsg {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.userInfo {
+  margin: 0 10px 0 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.dateTime {
+  align-self: flex-end;
+  color: gray;
+}

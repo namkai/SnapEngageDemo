@@ -1,0 +1,115 @@
+$selection: rgba(10,10,255,.30);
+
+@mixin headingText() {
+  color: white;
+  font-size: 4vh;
+}
+
+@mixin setDefault() {
+  height: 100%;
+  margin: 5px;
+}
+
+@mixin selection() {
+  font-weight: bold;
+  background: $selection;
+  border-radius: 10px;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  background: ghostwhite;
+  @include setDefault();
+
+  .header {
+    display: flex;
+    background: rgba(10,10,130,.90);
+    height: 8%;
+    border-radius: 3px;
+
+    > * {
+      height: 100%;
+    }
+  }
+
+  .info {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  .projectHeading {
+    @include headingText();
+    display: flex;
+    align-items: center;
+  }
+
+  .devHeading {
+    @include headingText();
+  }
+
+  .main {
+    display: flex;
+    @include setDefault();
+  }
+
+  .beta {
+    height: 100%;
+  }
+
+  .users {
+    @include setDefault();
+    flex-basis: 10%;
+
+    > span {
+      font-weight: bold;
+    }
+  }
+
+  .chats {
+    @include setDefault();
+    flex-basis: 25%;
+    overflow-y: auto;
+
+    > span {
+      font-weight: bold;
+    }
+  }
+
+  .chatHeader {
+    margin: 10px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .userHeader {
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .selectedUser {
+    @extend .userHeader;
+    @include selection();
+  }
+
+  .selectedChat {
+    background: $selection;
+    @include selection();
+  }
+
+  .separator {
+    width: 100%;
+  }
+
+  .transcript {
+    display: flex;
+    flex-flow: column nowrap;
+    @include setDefault();
+    flex-basis: 65%;
+  }
+}

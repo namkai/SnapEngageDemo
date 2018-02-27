@@ -1,0 +1,28 @@
+
+$modalMargin: 25%;
+
+.toolbar {
+  display: flex;
+
+  > * {
+    margin: 5px;
+  }
+}
+
+.chatInfo {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.modal {
+  position: absolute;
+  top: $modalMargin;
+  left: $modalMargin;
+  right: $modalMargin;
+  bottom: $modalMargin;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+}
